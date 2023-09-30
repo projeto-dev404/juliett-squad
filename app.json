@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "juliett",
+    "slug": "juliett",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
