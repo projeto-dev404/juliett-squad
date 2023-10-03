@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <View>
       <Image source={logoImage} style={styles.logo} />
-      <Text>Code Mentor</Text>
+      <Text>CodeMentor</Text>
     </View>
   );
 }
