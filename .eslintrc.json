@@ -15,11 +15,11 @@
     "project": "tsconfig.json"
   },
   "rules": {
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
     "semi": ["error", "always"],
     "no-console": "error",
-    "no-unused-vars": ["error", { "vars": "all" }]
+    "no-unused-vars": ["error", { "vars": "all" }],
+    "react/style-prop-object": "warn",
+    "@typescript-eslint/no-use-before-define": "warn"
   },
   "ignorePatterns": [".eslintrc.js", "*.config.js"]
 }
