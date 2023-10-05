@@ -1,16 +1,13 @@
 import {
-  View, Image, Text, StyleSheet, ImageURISource,
+  View, Image, Text, StyleSheet,
 } from 'react-native';
 import React from 'react';
-
-import codeMentorLogo from './assets/code-mentor-logo.jpeg';
-
-const logoImage: ImageURISource = codeMentorLogo as ImageURISource;
+import codeMentorLogo from '../assets/code-mentor-logo.jpeg';
 
 export default function Header() {
   return (
     <View>
-      <Image source={logoImage} style={styles.logo} />
+      <Image source={codeMentorLogo} style={styles.logo} />
       <Text>CodeMentor</Text>
     </View>
   );
