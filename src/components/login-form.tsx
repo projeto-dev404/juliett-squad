@@ -11,6 +11,10 @@ export default function LoginForm() {
     ? Alert.alert('Logado com sucesso!', `Informações de login: \nE-mail: ${email} \nSenha: ${password}`)
     : Alert.alert('Preencha todos os campos!'));
 
+  const handleRegister = () => (email && password
+    ? Alert.alert('Cadastrado com sucesso!')
+    : Alert.alert('Preencha todos os campos!'));
+
   return (
     <View>
       <Text>Login</Text>
@@ -25,7 +29,8 @@ export default function LoginForm() {
         onChangeText={(text) => setPassword(text)}
         value={password}
       />
-      <Button title="Login" onPress={handleLogin} />
+      <Button title="Entrar" onPress={handleLogin} />
+      <Button title="Cadastrar" onPress={handleRegister} />
     </View>
   );
 }
