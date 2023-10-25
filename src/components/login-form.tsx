@@ -8,19 +8,19 @@ export default function LoginForm() {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => (email && password
-    ? Alert.alert('Logado com sucesso!', `Informações de login: \nEmail: ${email} \nSenha: ${password}`)
+    ? Alert.alert('Logado com sucesso!', `Informações de login: \nE-mail: ${email} \nSenha: ${password}`)
     : Alert.alert('Preencha todos os campos!'));
 
   return (
     <View>
       <Text>Login</Text>
       <TextInput
-        placeholder="Email"
+        placeholder="E-mail"
         onChangeText={(text) => setEmail(text)}
         value={email}
       />
       <TextInput
-        placeholder="Password"
+        placeholder="Senha"
         secureTextEntry
         onChangeText={(text) => setPassword(text)}
         value={password}
