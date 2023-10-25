@@ -1,11 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Header from './components/header';
+import LoginForm from './components/login-form';
 
 export default function Login() {
   return (
     <View style={styles.container}>
       <Header />
+      <LoginForm />
     </View>
   );
 }
