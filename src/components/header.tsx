@@ -1,21 +1,13 @@
-import {
-  View, Image, Text, StyleSheet,
-} from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
 import codeMentorLogo from '../assets/code-mentor-logo.jpeg';
+import LogoImage from '../styles/header';
 
 export default function Header() {
   return (
     <View>
-      <Image source={codeMentorLogo} style={styles.logo} />
+      <LogoImage source={codeMentorLogo} />
       <Text>CodeMentor</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  logo: {
-    width: 96,
-    height: 96,
-  },
-});
