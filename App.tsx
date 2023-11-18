@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import styled from 'styled-components/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 import Login from './src/pages/login-page';
 
-const Container = styled.View`
-    flex: 1;
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-`;
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <Container>
-      <StatusBar />
-      <Login />
-    </Container>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
