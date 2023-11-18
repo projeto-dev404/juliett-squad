@@ -1,21 +1,13 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 import Header from './components/header';
 import LoginForm from './components/login-form';
+import LoginContainer from './styles/login-page';
 
 export default function Login() {
   return (
-    <View style={styles.container}>
+    <LoginContainer>
       <Header />
       <LoginForm />
-    </View>
+    </LoginContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
