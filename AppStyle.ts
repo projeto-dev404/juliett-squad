@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
-const Container = styled.view`
+const Container = styled.View`
     flex: 1;
     background-color: #fff;
     align-items: center;
