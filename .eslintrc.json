@@ -19,7 +19,12 @@
     "no-console": "error",
     "no-unused-vars": ["error", { "vars": "all" }],
     "react/style-prop-object": "warn",
-    "@typescript-eslint/no-use-before-define": "warn"
+    "@typescript-eslint/no-use-before-define": "warn",
+    "no-param-reassign": "error",
+      "props": true,
+      "ignorePropertyModificationsFor": [
+        "state"
+      ]
   },
   "ignorePatterns": [".eslintrc.js", "*.config.js"]
 }

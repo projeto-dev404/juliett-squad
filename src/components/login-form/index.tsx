@@ -1,5 +1,5 @@
 import {
-  View, Text, TextInput, Button, Alert,
+  View, TextInput, Button, Alert,
 } from 'react-native';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
