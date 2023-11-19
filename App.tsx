@@ -5,10 +5,11 @@ import { Provider, useSelector } from 'react-redux';
 import Login from './src/screens/login';
 import Home from './src/screens/home';
 import store from './src/store';
+import { RootState } from './src/types';
 
 function App() {
   const Stack = createNativeStackNavigator();
-  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  const isLoggedIn = useSelector((state: RootState) => state.login.isLoggedIn);
 
   return (
     <NavigationContainer>

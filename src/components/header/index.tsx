@@ -3,9 +3,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import codeMentorLogo from '../../assets/code-mentor-logo.jpeg';
 import LogoImage from './style';
+import { RootState } from '../../types';
 
 export default function Header() {
-  const loginStatus = useSelector((state) => state.login.isLoggedIn);
+  const loginStatus = useSelector((state: RootState) => state.login.isLoggedIn);
 
   return (
     <View>
