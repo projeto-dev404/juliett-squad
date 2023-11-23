@@ -1,22 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import Login from './src/login-page';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { Provider, useSelector } from 'react-redux';
+import Login from './src/screens/login';
+import Home from './src/screens/home';
+import store from './src/store';
+import { RootState } from './src/types';
 
-export default function App() {
+function App() {
+  const Stack = createNativeStackNavigator();
+  const isLoggedIn = useSelector((state: RootState) => state.login.isLoggedIn);
+
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Login />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        {isLoggedIn ? (
+          <Stack.Screen name="Home" component={Home} />
+        ) : (
+          <Stack.Screen name="Login" component={Login} />
+        )}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function AppWrapper() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+}
